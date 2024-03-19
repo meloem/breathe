@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AKq9WQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIgAAAAAAIiIiAAAAAAAREREAAAAAEREREREAAAERERERERAAAiIiIiIiIAARERERERERACISISISISIAEREREREREQIiIiIiIiIiIiIiIiIiIiIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4HwAA+B8AAOAHAADAAwAAgAEAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+vAAD/twAA/9sAAP/dAAD//wAA" rel="icon" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <title>Melo</title>
+  <link href="starter-template.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="largeScreen centre">
+      <label class="switch hidden-lg-up">
+        <input type="checkbox">
+        <div class="slider round"></div>
+      </label>
+
+      <div class="menu-icon" onclick="toggleMenu()">
+      <img src="Frame1.svg" alt="Hamburger Icon" class="hamburger">
+      </div>
+
+      <div id="dropdownMenu" class="dropdown-menu">
+        <a href="#">Box breathing</a><br>
+        <a href="#">478 technique</a><br>
+        <a href="#">10 in 10 out</a>
+    </div>
+
+    <script>
+      // JavaScript to toggle the dropdown menu
+      function toggleMenu() {
+          var menu = document.getElementById("dropdownMenu");
+          if (menu.style.display === "none" || menu.style.display === "") {
+              menu.style.display = "block";
+          } else {
+              menu.style.display = "none";
+          }
+      }
+      </script>
+
+        <div style="z-index: 990;" class="containerLang">
+          <h1 class="mainLang text-animated-1"> Bonjour </h1>
+          <h1 class="mainLang text-animated-2"> Hej </h1>
+          <h1 class="mainLang text-animated-3"> 안녕하세요 </h1>
+          <h1 class="mainLang text-animated-4"> こんにちは </h1>
+        </div>
+
+      <div class="star1 star" style="display:none;"></div>
+      <div class="star2 star" style="display:none;"></div>
+      <div class="star3 star" style="display:none;"></div>
+      <div class="star4 star" style="display:none;"></div>
+      <div class="star5 star" style="display:none;"></div>
+      <div class="star6 star" style="display:none;"></div>
+      <div class="star7 star" style="display:none;"></div>
+      <div class="fox">
+        <div>
+          <div class="head"></div>
+          <div class="cone"></div>
+          <div class="cone2"></div>
+          <div class="eye"></div>
+          <div class="eye2"></div>
+          <div class="eye3" style="display:none;"></div>
+        </div>
+        <div class="circle"></div>
+        <div class="tail">
+          <div class="minitail"></div>
+        </div>
+      </div>
+      <div class="bottom">
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
