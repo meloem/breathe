@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <div class="container">
       <div class="largeScreen centre">
       <label class="switch hidden-lg-up">
@@ -19,19 +20,22 @@
       </label>
 
       <div class="icons">
-     <a href="index.html" class="home-link">
-        <img src="home.svg" alt="Home Icon" class="home">
-      </a>
-      <div class="menu-icon" onclick="toggleMenu()">
-      <img src="frame1.svg" alt="Hamburger Icon" class="hamburger" id="hamburger">
-      </div>
+      
+        <a href="index.html" class="home-link">
+           <img src="home.svg" alt="Home Icon" class="home">
+         </a>
+         <div class="menu-icon" onclick="toggleMenu()">
+         <img src="frame1.svg" alt="Hamburger Icon" class="hamburger" id="hamburger">
+         </div>
+       </div>
+
+      <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
+        <a href="./box-breathing.html">Box breathing</a>
+        <a href="./478.html">478 technique</a>
+        <a href="./10.html">10 in 10 out</a>
     </div>
 
-    <div id="dropdownMenu" class="dropdown-menu">
-      <a href="./box-breathing.html">Box breathing</a>
-      <a href="./478.html">478 technique</a>
-      <a href="./10.html">10 in 10 out</a>
-  </div>
+    <script src="dropdown.js"></script>
 
     <script>
       // JavaScript to toggle the dropdown menu
@@ -45,31 +49,39 @@
       }
       </script>
 
-<!-- <div class="ellipse-container">
-  <div id="counter">1</div> -->
-
-  <div class="centered-container">
-    <div class="fullellipse">
-    <img src="ellipse.svg" alt="ellipse" class="ellipse">
-    <div id="counter">1</div>
-    </div>
-    <h1 class="mainLang-box text-animated-box">Sync your breathing</h1>
-</div>
+        <div style="z-index: 990;" class="containerLang">
+          <h1 class="mainLang text-animated-box"> Hello </h1>
         </div>
+
+      <div class="star1 star" style="display:none;"></div>
+      <div class="star2 star" style="display:none;"></div>
+      <div class="star3 star" style="display:none;"></div>
+      <div class="star4 star" style="display:none;"></div>
+      <div class="star5 star" style="display:none;"></div>
+      <div class="star6 star" style="display:none;"></div>
+      <div class="star7 star" style="display:none;"></div>
+      <div class="fox">
+        <div>
+          <div class="head"></div>
+          <div class="cone"></div>
+          <div class="cone2"></div>
+          <div class="eye"></div>
+          <div class="eye2"></div>
+          <div class="eye3" style="display:none;"></div>
+        </div>
+        <div class="circle"></div>
+        <div class="tail">
+          <div class="minitail"></div>
+        </div>
+      </div>
+      <div class="bottom">
+      </div>
     </div>
   </div>
-  <footer class="site-footer">
+  <footer class="site-footer-about">
     <a href="about.html">About</a>
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <script src="script.js"></script>
-
-  <script>
-    let count = 1;
-    setInterval(() => {
-      document.getElementById('counter').textContent = count;
-      count = count >= 5 ? 1 : count + 1;
-    }, 1000); // Update the count every 1000 milliseconds (1 second)
-    </script>
 </body>
 </html>

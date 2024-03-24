@@ -27,17 +27,34 @@ $(document).ready(function(){
   }
 
   function setNight() {
-    $('.container').css("background-color", "black")
+    $('body').css("background-color", "black")
+    $('.site-footer').css("background-color", "black")
+    $('.site-footer-about').css("background-color", "black")
+    $('.site-footer-10').css("background-color", "black")
     $('.star').toggle('wiggle')
     $('.mainLang').css("color", "white")
-    $('.bottom').css("background-color", "#F4D03F")
+    $('.bottom').css("background-color", "#FAB152")
+    $('.hamburger').attr("src", "frame2.svg");
+    $('.site-footer a').css("color", "#FAB152")
+    $('.site-footer-about a').css("color", "#FAB152")
   }
 
   function setDay() {
-    $('.container').css("background-color", "white")
+    if (location.href.includes("10")) {
+    $('body').css("background-color", "#1D3273")  
+    $('.site-footer-10').css("background-color", "#1D3273")
+    $('#hamburger').attr("src", "frame3.svg");
+    } else {
+      $('body').css("background-color", "#FFEEDB")
+    $('#hamburger').attr("src", "frame1.svg");
+    }
+    $('.site-footer').css("background-color", "#FFEEDB")
+    $('.site-footer-about').css("background-color", "#FFEEDB")
     $('.star').toggle('wiggle')
     $('.mainLang').css("color", "black")
     $('.bottom').css("background-color", "black")
+    $('.site-footer a').css("color", "#6351A3")
+    $('.site-footer-about a').css("color", "#6351A3")
   }
 
   function toggleDayNight() {
@@ -76,3 +93,30 @@ $(document).ready(function(){
   displayElts()
   $(window).scroll(displayElts)
 })
+
+var dropdown = document.getElementById("dropdownMenu");
+var hamburger = document.getElementsByClassName("hamburger")[0];  
+
+document.addEventListener('click', function(event) {
+    var isClickInsideHamburger = hamburger.contains(event.target);
+    var isClickInsideDropdown = dropdown.contains(event.target);
+
+    if (!isClickInsideDropdown && !isClickInsideHamburger) {
+        dropdown.style.display = 'none';
+    }
+});
+
+let count = 1;
+const counter = document.getElementById('counter');
+
+function updateCounter() {
+    // Update the counter display and increment the count
+    counter.textContent = count.toString();
+    count = (count % 5) + 1;  // Reset to 1 after reaching 5
+    
+    // Call updateCounter every second
+    setTimeout(updateCounter, 1000);
+}
+
+// Initialize the counter immediately
+updateCounter();

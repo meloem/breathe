@@ -10,23 +10,28 @@
 
 </head>
 
-<body>
+<body style="background-color: #1D3273">
     <div class="container">
       <div class="largeScreen centre">
       <label class="switch hidden-lg-up">
         <input type="checkbox">
-        <div class="slider round"></div>
+        <div class="slider round" style="background-color:#D9A3A3;"></div>
       </label>
 
+      <div class="icons">
+     <a href="index.html" class="home-link">
+        <img src="home.svg" alt="Home Icon" class="home">
+      </a>
       <div class="menu-icon" onclick="toggleMenu()">
-      <img src="frame1.svg" alt="Hamburger Icon" class="hamburger">
+      <img src="frame3.svg" alt="Hamburger Icon" class="hamburger" id="hamburger">
       </div>
-
-      <div id="dropdownMenu" class="dropdown-menu">
-        <a href="#">Box breathing</a><br>
-        <a href="#">478 technique</a><br>
-        <a href="#">10 in 10 out</a>
     </div>
+
+    <div id="dropdownMenu" class="dropdown-menu">
+      <a href="./box-breathing.html">Box breathing</a>
+      <a href="./478.html">478 technique</a>
+      <a href="./10.html">10 in 10 out</a>
+  </div>
 
     <script>
       // JavaScript to toggle the dropdown menu
@@ -40,16 +45,31 @@
       }
       </script>
 
-        <div>
-          <img src="ellipse.svg" alt="ellipse" class="ellipse">
-        </div>
+<!-- <div class="ellipse-container">
+  <div id="counter">1</div> -->
 
-        <div style="z-index: 990;" class="containerLang">
-          <h1 class="mainLang-box text-animated-box"> Sync your breathing </h1>
+  <div class="centered-container">
+    <div class="fullellipse">
+    <img src="triangle.svg" alt="triangle" class="triangle">
+    <div id="counter">1</div>
+    </div>
+    <h1 class="mainLang-10 text-animated-box">Sync your breathing</h1>
+</div>
         </div>
     </div>
   </div>
+  <footer class="site-footer-10">
+    <a href="about.html">About</a>
+</footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <script src="script.js"></script>
+
+  <script>
+    let count = 1;
+    setInterval(() => {
+      document.getElementById('counter').textContent = count;
+      count = count >= 5 ? 1 : count + 1;
+    }, 1000); // Update the count every 1000 milliseconds (1 second)
+    </script>
 </body>
 </html>
