@@ -89,7 +89,6 @@ body {
 
 @media screen and (max-width: 480px) {
   .container {
-    height: 660px;
     width: 100%;
     top: 0%;
     position: relative;
@@ -1206,13 +1205,12 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .ellipse {
-      width: 90px;
-      height: 90px;
-      margin-left: 5%;
+      width: 200px;
+      height: 200px;
       z-index: 700;
       position: absolute;
       margin-top: inherit;
-      top:237px;
+      top:200px;
   }
 }
 
@@ -1284,7 +1282,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer {
-    margin-top: 10px;
+    margin-top: 60px;
     background-color: #D3E8F4;
     text-align: center;
   }
@@ -1292,7 +1290,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer-478 {
-    margin-top: 10px;
+    margin-top: 60px;
     background-color: #73464E;
     text-align: center;
   }
@@ -1300,7 +1298,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer-10 {
-    margin-top: 10px;
+    margin-top: 60px;
     background-color: #1D3273;
     text-align: center;
   }
@@ -1308,7 +1306,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer-about {
-    margin-top: 10px;
+    margin-top: 60px;
     background-color: #D3E8F4;
     text-align: center;
   }
