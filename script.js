@@ -34,13 +34,13 @@ $(document).ready(function(){
     $('.site-footer-478').css("background-color", "black")
     $('.site-footer-box').css("background-color", "black")
     $('.star').toggle('wiggle')
-    $('.mainLang').css({"color": "#D3E8F4", "opacity": "0.8"})
-    $('.mainLang-box').css({"color": "#D3E8F4", "opacity": "0.8"})
+    $('.mainLang').css("color", "#87B6FF")
+    $('.mainLang-box').css({"color": "#87B6FF", "opacity": "40%"})
     $('.bottom').css("background-color", "#FAB152")
     $('.hamburger').attr("src", "frame3.svg");
     $('.random').attr("src", "random3.svg");
-    $('.site-footer a').css("color", "#D3E8F4")
-    $('.site-footer-about a').css("color", "#D3E8F4")
+    $('.site-footer a').css("color", "#87B6FF")
+    $('.site-footer-about a').css("color", "#87B6FF")
     $('.slider').css("background-color", "#FAB152")
   }
   function setDay() {
@@ -62,6 +62,12 @@ $(document).ready(function(){
       $('#hamburger').attr("src", "frame4.svg");
       $('.slider').css("background-color", "#8C2641");
     $('.random').attr("src", "random4.svg");
+  } else if (location.href.includes("index")) {
+    $('body').css("background-color", "#D3E8F4");
+    $('.site-footer-box').css("background-color", "#D3E8F4");
+    $('#hamburger').attr("src", "frame1.svg");
+    $('.slider').css("background-color", "#6351A3");
+  $('.random').attr("src", "random1.svg");
         } else {
           $('body').css("background-color", "#D3E8F4")
         $('#hamburger').attr("src", "frame1.svg");

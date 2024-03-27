@@ -444,8 +444,8 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
 .mainLang-box {
     color: #6351A3;
-    font-size: 35px;
-    top: 150px;
+    font-size: 25px;
+    top: 100px;
   }
 }
 
@@ -1206,8 +1206,9 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .ellipse {
+      width: 200px;
+      height: 200px;
       margin-left: 5%;
-      transform: scale(.4,.4);
       z-index: 700;
       position: absolute;
       margin-top: inherit;
@@ -1283,7 +1284,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer {
-    margin-top: 120px;
+    margin-top: 80px;
     background-color: #D3E8F4;
     text-align: center;
   }
@@ -1291,7 +1292,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer-478 {
-    margin-top: 120px;
+    margin-top: 80px;
     background-color: #73464E;
     text-align: center;
   }
@@ -1299,7 +1300,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer-10 {
-    margin-top: 120px;
+    margin-top: 80px;
     background-color: #1D3273;
     text-align: center;
   }
