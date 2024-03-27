@@ -10,25 +10,25 @@
 
 </head>
 
-<body>
+<body style="background-color: #D9A3BC">
     <div class="container">
       <div class="largeScreen centre">
       <label class="switch hidden-lg-up">
         <input type="checkbox">
-        <div class="slider round" style="background-color: #6351A3;"></div>
+        <div class="slider round" style="background-color:#8C2641;"></div>
       </label>
 
       <div class="icons">
-     <a href="index.html" class="home-link">
-        <img src="home.svg" alt="Home Icon" class="home">
-      </a>
-      <div class="menu-icon" onclick="toggleMenu()">
-      <img src="frame1.svg" alt="Hamburger Icon" class="hamburger" id="hamburger">
-      </div>
-      <div class="menu-icon" onclick="randomizeBreathingTechnique()">
-        <img src="random1.svg" alt="Randomize Icon" class="random" id="randomIcon">
-      </div>
-    </div>
+        <a href="index.html" class="home-link">
+           <img src="home.svg" alt="Home Icon" class="home">
+         </a>
+         <div class="menu-icon" onclick="toggleMenu()">
+         <img src="frame4.svg" alt="Hamburger Icon" class="hamburger" id="hamburger">
+         </div>
+         <div class="menu-icon" onclick="randomizeBreathingTechnique()">
+          <img src="random4.svg" alt="Randomize Icon" class="random" id="randomIcon">
+        </div>
+       </div>
 
     <div id="dropdownMenu" class="dropdown-menu">
       <a href="./box-breathing.html">Box breathing</a>
@@ -53,15 +53,15 @@
 
   <div class="centered-container">
     <div class="fullellipse">
-    <img src="ellipse.svg" alt="ellipse" class="ellipse">
-    <div id="counter">1</div>
+        <img src="box.gif" alt="box" class="box">
+        <div id="counter4">1</div>
     </div>
-    <h1 class="mainLang-box text-animated-box text-fade-in">Sync your breathing</h1>
+    <h1 class="mainLang-boxbreathing text-animated-10">Sync your breathing</h1>
 </div>
         </div>
     </div>
   </div>
-  <footer class="site-footer">
+  <footer class="site-footer-box">
     <a href="about.html">About</a>
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -74,6 +74,43 @@
       count = count >= 5 ? 1 : count + 1;
     }, 1000); // Update the count every 1000 milliseconds (1 second)
     </script>
+<script>
+  let count4 = 1;
+  let totalSeconds4 = 0; // Track the total seconds for counter4
+  const counter4 = document.getElementById('counter4'); // Get the counter4 display element
+  const textDisplay4 = document.querySelector('.mainLang-boxbreathing.text-animated-10'); // Get the h1 element
+
+  function updateCounter4() {
+    counter4.textContent = count4.toString(); // Update the counter display
+
+    // Update the h1 text based on the current phase
+    if (totalSeconds4 >= 0 && totalSeconds4 < 4) {
+      textDisplay4.textContent = "Breathe in for 4";
+    } else if (totalSeconds4 >= 4 && totalSeconds4 < 8) {
+      textDisplay4.textContent = "Hold for 4";
+    } else if (totalSeconds4 >= 8 && totalSeconds4 < 12) {
+      textDisplay4.textContent = "Breathe out for 4";
+    } else if (totalSeconds4 >= 12 && totalSeconds4 < 16) {
+      textDisplay4.textContent = "Hold for 4";
+    }
+
+    // Increment the counters
+    totalSeconds4++;
+    count4 = totalSeconds4 % 4 === 0 ? 1 : count4 + 1; // Reset the counter after every 4 seconds
+
+    // Reset the total seconds after 16 seconds to restart the cycle
+    if (totalSeconds4 >= 16) {
+      totalSeconds4 = 0; // Reset the total seconds to start a new cycle
+    }
+
+    // Repeat the function every second
+    setTimeout(updateCounter4, 1000);
+  }
+
+  // Initialize the counter immediately
+  updateCounter4();
+</script>
+
 <script>
   function randomizeBreathingTechnique() {
     const pages = ['./box-breathing.html', './478.html', './10.html'];
@@ -94,20 +131,6 @@
     }
   }
 </script>
-<script>
-  // Wait for the DOM to fully load
-  document.addEventListener('DOMContentLoaded', function() {
-    // Select the h1 element
-    const mainLangBox = document.querySelector('.mainLang-box.text-animated-box');
-
-    // Initially set the text to "Welcome"
-    mainLangBox.textContent = 'Welcome';
-
-    // Change the text after 3 seconds
-    setTimeout(function() {
-      mainLangBox.textContent = 'Take a moment to sync your breathing';
-    }, 3000); // 3000 milliseconds = 3 seconds
-  });
-</script>
+    
 </body>
 </html>

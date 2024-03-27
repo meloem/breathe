@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
-  background-color: #FFEEDB;
+  background-color: #D3E8F4;
   flex-direction: column;
   margin: 0;
   height: 100%;
@@ -30,6 +30,15 @@ body {
   width: 45px;
   height: 45px;
   padding: 15px;
+  cursor: pointer;
+}
+
+.random {
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  cursor: pointer;
+  opacity: 90%;
 }
 
 .icons {
@@ -42,8 +51,9 @@ body {
 
 @media (max-width: 480px) {
   .home,
-  .hamburger {
-    padding: 5px; /* Reduced padding for smaller screens */
+  .hamburger,
+  .random {
+    padding: 10px; /* Reduced padding for smaller screens */
     width: 40px; /* Optional: Reduce width for smaller screens */
     height: 40px; /* Optional: Reduce height for smaller screens */
   }
@@ -89,7 +99,7 @@ body {
 .fox {
   width: 30%;
   margin-left: 30%;
-  margin-top: 23%;
+  margin-top: 15%;
   position: relative;
 }
 @media screen and (max-width: 480px) {
@@ -345,21 +355,60 @@ margin-top: 61px;
 }
 
 .mainLang {
-  color: black;
-  font-size: 80px;
+  color: #6351A3;
+  font-size: 25px;
+  margin-top: 20px;
+  -webkit-animation: FadeIn;
+
 }
 
 @media screen and (max-width: 480px) {
   .mainLang {
-      color: black;
-      font-size: 40px;
-      top:-10px;
+      color: #6351A3;
+      font-size: 20px;
+      top:400px;
+      padding: 10px;
     }
   }
 
 .mainLang-box {
   color: #6351A3;
-  font-size: 50px;
+  font-size: 35px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 990;
+  padding: 5px;
+}
+
+.mainLang-boxbreathing {
+  color: #8C2641;
+  font-size: 40px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 990;
+  padding: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .mainLang-boxbreathing {
+    color: #8C2641;
+    font-size: 35px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 990;
+    padding: 5px;
+    }
+  }
+
+.mainLang-478 {
+  color: #D9A3A3;
+  font-size: 40px;
   position: absolute;
   top: 110%;
   left: 50%;
@@ -370,7 +419,7 @@ margin-top: 61px;
 
 .mainLang-10 {
   color: #D9A3A3;
-  font-size: 50px;
+  font-size: 40px;
   position: absolute;
   top: 110%;
   left: 50%;
@@ -380,10 +429,23 @@ margin-top: 61px;
 }
 
 @media screen and (max-width: 480px) {
+  .mainLang-10 {
+    color: #D9A3A3;
+    font-size: 35px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 990;
+    padding: 5px;
+    }
+  }
+
+@media screen and (max-width: 480px) {
 .mainLang-box {
     color: #6351A3;
     font-size: 35px;
-    top:80px;
+    top: 150px;
   }
 }
 
@@ -444,7 +506,7 @@ margin-top: 61px;
   -webkit-border-radius: 50px;
   border-radius: 70px;
   position: absolute;
-  top: 80px;
+  top: 100px;
   left: 212px;
   -webkit-animation: breathing 6s ease-out infinite normal;
   animation: breathing 6s ease-out infinite normal;
@@ -1037,9 +1099,7 @@ left: 3%;
   -webkit-animation:fade4 12s infinite;
 }
 
-.text-animated-box {
-  opacity:0;
-  -webkit-animation:fade1 12s;
+.text-animated-10 {
   -webkit-animation-iteration-count: 1;
   display:inline;
   position:absolute;
@@ -1057,11 +1117,83 @@ left: 3%;
 .triangle {
   width: 500px; 
   height: 500px;
-  animation: breathing 10s linear infinite;
+  animation: breathing 20s linear infinite;
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any extra space below the image */
   max-width: 100%;  /* Adjust based on your needs */
 }
+
+.box {
+  width: 500px; 
+  height: 500px;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra space below the image */
+  max-width: 100%;  /* Adjust based on your needs */
+}
+
+@media screen and (max-width: 480px) {
+  .triangle {
+    width: 300px; 
+    height: 300px;
+    animation: breathing 20s linear infinite;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    max-width: 100%;  /* Adjust based on your needs */
+  }
+}
+
+.heart {
+  width: 300px; 
+  height: 300px;
+  animation: heart-breathing 19s linear infinite; /* Apply the animation */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra space below the image */
+  max-width: 100%;  /* Adjust based on your needs */
+}
+
+@media screen and (max-width: 480px) {
+  .heart {
+    width: 150px; 
+    height: 150px;
+    animation: heart-breathing 19s linear infinite; /* Apply the animation */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    max-width: 100%;  /* Adjust based on your needs */
+  }
+}
+
+@keyframes counter3-breathing {
+}
+
+#counter3 {
+  position: absolute;
+  font-size: 40px;
+  color: #FFEEDB;
+  font-family: sans-serif;
+  animation: counter3-breathing 19s linear infinite;
+  z-index: 10;
+  opacity: 80%;
+}
+
+@media screen and (max-width: 480px) {
+  #counter3 {
+    position: absolute;
+    font-size: 35px;
+    color: #FFEEDB;
+    font-family: sans-serif;
+    animation: counter3-breathing 19s linear infinite;
+    z-index: 10;
+    opacity: 80%;
+  }
+}
+
+@keyframes heart-breathing {
+  0%, 57.89%, 100% { transform: scale(1); } /* Start, end, and during freeze at normal size */
+  21.05% { transform: scale(1.5); } /* Scale up at end of breathe in */
+  57.89% { transform: scale(1.5); } /* Maintain scale until breathe out starts */
+  94.74% { transform: scale(1); } /* Scale down by the end of breathe out */
+}
+
 
 .centered-container {
   text-align: center;
@@ -1085,14 +1217,14 @@ left: 3%;
 
 .site-footer {
   margin-top: 179px; /* Pushes the footer to the bottom */
-  background-color: #FFEEDB; /* Light grey background */
+  background-color: #D3E8F4; /* Light grey background */
   padding: 30px; /* Adds some padding inside the footer */
   text-align:right; /* Centers the content */
 }
 
 .site-footer-about {
-  margin-top: 80px; /* Pushes the footer to the bottom */
-  background-color: #FFEEDB; /* Light grey background */
+  margin-top: 120px; /* Pushes the footer to the bottom */
+  background-color: #D3E8F4; /* Light grey background */
   padding: 50px; /* Adds some padding inside the footer */
   text-align:right; /* Centers the content */
   margin-right: 20px;
@@ -1107,11 +1239,25 @@ left: 3%;
 
   .site-footer-10 {
     margin-top: 179px; /* Pushes the footer to the bottom */
-    background-color: #FFEEDB; /* Light grey background */
     padding: 30px; /* Adds some padding inside the footer */
     text-align:right; /* Centers the content */
     background-color: #1D3273;
   }
+
+  .site-footer-box {
+    margin-top: 179px; /* Pushes the footer to the bottom */
+    padding: 30px; /* Adds some padding inside the footer */
+    text-align:right; /* Centers the content */
+    background-color: #D9A3BC;
+  }
+
+  .site-footer-box a {
+    text-decoration: none; /* Removes underline from links */
+    color: #8C2641;
+      font-size: 20px;
+      font-family: sans-serif;
+    margin-right: 40px;
+    }
 
   .site-footer-10 a {
     text-decoration: none; /* Removes underline from links */
@@ -1121,10 +1267,40 @@ left: 3%;
     margin-right: 40px;
     }
 
+    .site-footer-478 {
+      margin-top: 179px; /* Pushes the footer to the bottom */
+      padding: 30px; /* Adds some padding inside the footer */
+      text-align:right; /* Centers the content */
+    }
+  
+    .site-footer-478 a {
+      text-decoration: none; /* Removes underline from links */
+      color: #D9A3A3;
+        font-size: 20px;
+        font-family: sans-serif;
+      margin-right: 40px;
+      }
+
 @media screen and (max-width: 480px) {
   .site-footer {
     margin-top: 120px;
-    background-color: #FFEEDB;
+    background-color: #D3E8F4;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-footer-478 {
+    margin-top: 120px;
+    background-color: #73464E;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-footer-10 {
+    margin-top: 120px;
+    background-color: #1D3273;
     text-align: center;
   }
 }
@@ -1132,7 +1308,7 @@ left: 3%;
 @media screen and (max-width: 480px) {
   .site-footer-about {
     margin-top: 90px;
-    background-color: #FFEEDB;
+    background-color: #D3E8F4;
     text-align: center;
   }
 }
@@ -1167,7 +1343,7 @@ color: #6351A3;
 
 #counter {
   position: absolute;
-  font-size: 80px; /* Adjust as needed */
+  font-size: 50px; /* Adjust as needed */
   color: #FFEEDB; /* Adjust as needed */
   font-family: sans-serif;
   animation: counter-breathing 10s linear infinite;
@@ -1187,6 +1363,78 @@ display:none;
   50% { content: "3"; }
   75% { content: "4"; }
   100% { content: "5"; }
+}
+
+#counter2 {
+  position: absolute;
+  font-size: 50px; /* Adjust as needed */
+  color: #FFEEDB; /* Adjust as needed */
+  font-family: sans-serif;
+  animation: counter2-breathing 20s linear infinite;
+  z-index: 10; /* Ensures the text is above the image */
+  opacity: 80%;
+}
+
+#counter4 {
+  position: absolute;
+  font-size: 50px; /* Adjust as needed */
+  color: #FFEEDB; /* Adjust as needed */
+  font-family: sans-serif;
+  animation: counter2-breathing 20s linear infinite;
+  z-index: 10; /* Ensures the text is above the image */
+  opacity: 80%;
+}
+
+@media screen and (max-width: 480px) {
+  #counter2 {
+    position: absolute;
+    font-size: 35px; /* Adjust as needed */
+    color: #FFEEDB; /* Adjust as needed */
+    font-family: sans-serif;
+    animation: counter2-breathing 20s linear infinite;
+    z-index: 10; /* Ensures the text is above the image */
+    opacity: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #counter4 {
+    position: absolute;
+    font-size: 35px; /* Adjust as needed */
+    color: #FFEEDB; /* Adjust as needed */
+    font-family: sans-serif;
+    animation: counter2-breathing 20s linear infinite;
+    z-index: 10; /* Ensures the text is above the image */
+    opacity: 80%;
+  }
+}
+
+@keyframes counter2-breathing {
+  0% { content: "1"; }
+  20% { content: "2"; }
+  40% { content: "3"; }
+  60% { content: "4"; }
+  80% { content: "5"; }
+  100% { content: "6"; }
+  120% { content: "7"; }
+  140% { content: "8"; }
+  160% { content: "9"; }
+  180% { content: "10"; }
+}
+
+.text-fade-in {
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0:6s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 

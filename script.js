@@ -31,30 +31,50 @@ $(document).ready(function(){
     $('.site-footer').css("background-color", "black")
     $('.site-footer-about').css("background-color", "black")
     $('.site-footer-10').css("background-color", "black")
+    $('.site-footer-478').css("background-color", "black")
+    $('.site-footer-box').css("background-color", "black")
     $('.star').toggle('wiggle')
-    $('.mainLang').css("color", "white")
+    $('.mainLang').css({"color": "#D3E8F4", "opacity": "0.8"})
+    $('.mainLang-box').css({"color": "#D3E8F4", "opacity": "0.8"})
     $('.bottom').css("background-color", "#FAB152")
-    $('.hamburger').attr("src", "frame2.svg");
-    $('.site-footer a').css("color", "#FAB152")
-    $('.site-footer-about a').css("color", "#FAB152")
+    $('.hamburger').attr("src", "frame3.svg");
+    $('.random').attr("src", "random3.svg");
+    $('.site-footer a').css("color", "#D3E8F4")
+    $('.site-footer-about a').css("color", "#D3E8F4")
+    $('.slider').css("background-color", "#FAB152")
   }
-
   function setDay() {
-    if (location.href.includes("10")) {
-    $('body').css("background-color", "#1D3273")  
-    $('.site-footer-10').css("background-color", "#1D3273")
-    $('#hamburger').attr("src", "frame3.svg");
-    } else {
-      $('body').css("background-color", "#FFEEDB")
-    $('#hamburger').attr("src", "frame1.svg");
-    }
-    $('.site-footer').css("background-color", "#FFEEDB")
-    $('.site-footer-about').css("background-color", "#FFEEDB")
+    if (location.href.includes("478")) {
+      $('body').css("background-color", "#73464E");
+      $('.site-footer-478').css("background-color", "#73464E");
+      $('#hamburger').attr("src", "frame3.svg");
+      $('.slider').css("background-color", "#D9A3A3");
+    $('.random').attr("src", "random3.svg");
+    } else if (location.href.includes("10")) {
+      $('body').css("background-color", "#1D3273");
+      $('.site-footer-10').css("background-color", "#1D3273");
+      $('#hamburger').attr("src", "frame3.svg");
+      $('.slider').css("background-color", "#D9A3A3");
+    $('.random').attr("src", "random3.svg");
+    } else if (location.href.includes("box")) {
+      $('body').css("background-color", "#D9A3BC");
+      $('.site-footer-box').css("background-color", "#D9A3BC");
+      $('#hamburger').attr("src", "frame4.svg");
+      $('.slider').css("background-color", "#8C2641");
+    $('.random').attr("src", "random4.svg");
+        } else {
+          $('body').css("background-color", "#D3E8F4")
+        $('#hamburger').attr("src", "frame1.svg");
+      $('.slider').css("background-color", "#6351A3")
+        }
+    $('.site-footer').css("background-color", "#D3E8F4")
+    $('.site-footer-about').css("background-color", "#D3E8F4")
     $('.star').toggle('wiggle')
-    $('.mainLang').css("color", "black")
+    $('.mainLang').css("color", "#6351A3")
     $('.bottom').css("background-color", "black")
     $('.site-footer a').css("color", "#6351A3")
     $('.site-footer-about a').css("color", "#6351A3")
+    $('.mainLang-box').css("color", "#6351A3")
   }
 
   function toggleDayNight() {

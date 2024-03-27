@@ -19,13 +19,16 @@
       </label>
 
       <div class="icons">
-     <a href="index.html" class="home-link">
-        <img src="home.svg" alt="Home Icon" class="home">
-      </a>
-      <div class="menu-icon" onclick="toggleMenu()">
-      <img src="frame3.svg" alt="Hamburger Icon" class="hamburger" id="hamburger">
-      </div>
-    </div>
+        <a href="index.html" class="home-link">
+           <img src="home.svg" alt="Home Icon" class="home">
+         </a>
+         <div class="menu-icon" onclick="toggleMenu()">
+         <img src="frame3.svg" alt="Hamburger Icon" class="hamburger" id="hamburger">
+         </div>
+         <div class="menu-icon" onclick="randomizeBreathingTechnique()">
+          <img src="random3.svg" alt="Randomize Icon" class="random" id="randomIcon">
+        </div>
+       </div>
 
     <div id="dropdownMenu" class="dropdown-menu">
       <a href="./box-breathing.html">Box breathing</a>
@@ -51,9 +54,9 @@
   <div class="centered-container">
     <div class="fullellipse">
     <img src="triangle.svg" alt="triangle" class="triangle">
-    <div id="counter">1</div>
+    <div id="counter2">1</div>
     </div>
-    <h1 class="mainLang-10 text-animated-box">Sync your breathing</h1>
+    <h1 class="mainLang-10 text-animated-10">Sync your breathing</h1>
 </div>
         </div>
     </div>
@@ -71,5 +74,63 @@
       count = count >= 5 ? 1 : count + 1;
     }, 1000); // Update the count every 1000 milliseconds (1 second)
     </script>
+<script>
+  let count2 = 1;
+  let totalSeconds2 = 0; // Track the total seconds to determine the phase
+  const counter2 = document.getElementById('counter2');
+  const textDisplay2 = document.querySelector('.mainLang-10.text-animated-10'); // Get the h1 element
+
+  function updateCounter2() {
+    counter2.textContent = count2.toString();
+    totalSeconds2++; // Increment the total seconds
+
+    // Update the h1 text based on the current phase
+    if (totalSeconds2 <= 10) {
+      textDisplay2.textContent = "Breathe in for 10";
+    } else {
+      textDisplay2.textContent = "Breathe out for 10";
+    }
+
+    // Increment the counter and reset if it reaches beyond 10
+    if (count2 >= 10) {
+      count2 = 1; // Reset the counter after 10
+    } else {
+      count2++;
+    }
+
+    // Reset the total seconds after 20 to restart the cycle
+    if (totalSeconds2 > 20) {
+      totalSeconds2 = 1; // Reset the total seconds to start a new cycle
+    }
+
+    // Repeat the function every second
+    setTimeout(updateCounter2, 1000);
+  }
+
+  // Initialize the counter immediately
+  updateCounter2();
+</script>
+
+<script>
+  function randomizeBreathingTechnique() {
+    const pages = ['./box-breathing.html', './478.html', './10.html'];
+
+    // Get a random page
+    let randomPage = pages[Math.floor(Math.random() * pages.length)];
+
+    // Add a unique timestamp or random number as a query string to the URL
+    const uniqueString = '?t=' + new Date().getTime();
+
+    // Check if the random page is the same as the current page
+    if (window.location.pathname.includes(randomPage.replace('./', ''))) {
+      // If it's the same page, call the function again to get a new page
+      randomizeBreathingTechnique();
+    } else {
+      // If it's a different page, navigate to the new page with the unique query string
+      window.location.href = randomPage + uniqueString;
+    }
+  }
+</script>
+    
 </body>
 </html>
