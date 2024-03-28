@@ -31,7 +31,13 @@
          <div class="menu-icon" onclick="randomizeBreathingTechnique()">
           <img src="random3.svg" alt="Randomize Icon" class="random" id="randomIcon">
         </div>
+        <div onclick="toggleMusicIcon()">
+          <img src="off3.svg" alt="Music Icon" class="music" id="musicIcon">
+        </div>
        </div>
+
+       <audio id="sereneAudio" src="serene.mp3"></audio>
+
 
     <div id="dropdownMenu" class="dropdown-menu">
       <a href="./box-breathing.html">Box breathing</a>
@@ -138,7 +144,41 @@
   // Initialize the counter
   updateCounter3();
 </script>
+<script>
+  function toggleMusicIcon() {
+    const musicIcon = document.getElementById('musicIcon');
 
+    // Check if the icon is currently showing 'on'
+    if (musicIcon.getAttribute('src') === 'on3.svg') {
+      musicIcon.setAttribute('src', 'off3.svg');  // If so, switch to 'off'
+    } else {
+      musicIcon.setAttribute('src', 'on3.svg');  // Otherwise, switch back to 'on'
+    }
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const musicIcon = document.getElementById('musicIcon');
+    const audio = document.getElementById('sereneAudio');
+
+    // Assuming music should be off initially
+    musicIcon.src = 'off3.svg'; // Start with the 'off' icon
+    audio.pause();
+
+    window.toggleMusicIcon = function() {
+      if (musicIcon.src.includes('off3.svg')) {
+        // If the 'off' icon is displayed, play the music and switch to the 'on' icon
+        audio.play();
+        musicIcon.src = 'on3.svg';
+      } else {
+        // If the 'on' icon is displayed, stop the music, switch to the 'off' icon, and reset the song
+        audio.pause();
+        audio.currentTime = 0;  // Reset the song to the beginning
+        musicIcon.src = 'off3.svg';
+      }
+    };
+  });
+</script>
     
 </body>
 </html>

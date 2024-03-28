@@ -32,6 +32,9 @@
          <div class="menu-icon" onclick="randomizeBreathingTechnique()">
           <img src="random1.svg" alt="Randomize Icon" class="random" id="randomIcon">
         </div>
+        <div onclick="toggleMusicIcon()">
+          <img src="on1.svg" alt="Music Icon" class="music" id="musicIcon">
+        </div>
        </div>
 
       <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
@@ -106,6 +109,18 @@
       } else {
         // If it's a different page, navigate to the new page with the unique query string
         window.location.href = randomPage + uniqueString;
+      }
+    }
+  </script>
+  <script>
+    function toggleMusicIcon() {
+      const musicIcon = document.getElementById('musicIcon');
+  
+      // Check if the icon is currently showing 'on'
+      if (musicIcon.getAttribute('src') === 'on1.svg') {
+        musicIcon.setAttribute('src', 'off1.svg');  // If so, switch to 'off'
+      } else {
+        musicIcon.setAttribute('src', 'on1.svg');  // Otherwise, switch back to 'on'
       }
     }
   </script>
