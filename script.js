@@ -35,13 +35,16 @@ $(document).ready(function(){
     $('.site-footer-box').css("background-color", "black")
     $('.star').toggle('wiggle')
     $('.mainLang').css("color", "#87B6FF")
+    $('.mainLang-boxbreathing').css("color", "#D9A3A3")
     $('.mainLang-box').css({"color": "#87B6FF", "opacity": "40%"})
     $('.bottom').css("background-color", "#FAB152")
     $('.hamburger').attr("src", "frame3.svg");
     $('.random').attr("src", "random3.svg");
     $('.site-footer a').css("color", "#87B6FF")
     $('.site-footer-about a').css("color", "#87B6FF")
+    $('.site-footer-box a').css("color", "#D9A3A3")
     $('.slider').css("background-color", "#FAB152")
+    $('.box').attr("src", "box2.gif");
   }
   function setDay() {
     if (location.href.includes("478")) {
@@ -81,6 +84,10 @@ $(document).ready(function(){
     $('.site-footer a').css("color", "#6351A3")
     $('.site-footer-about a').css("color", "#6351A3")
     $('.mainLang-box').css("color", "#6351A3")
+    $('.box').attr("src", "box.gif");
+    $('.mainLang-boxbreathing').css("color", "#8C2641")
+    $('.site-footer-box a').css("color", "#8C2641")
+  $('.random').attr("src", "random1.svg");
   }
 
   function toggleDayNight() {
