@@ -365,7 +365,7 @@ margin-top: 61px;
   .mainLang {
       color: #6351A3;
       font-size: 20px;
-      top:50px;
+      top:75px;
       padding: 10px;
     }
   }
@@ -395,9 +395,9 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
   .mainLang-boxbreathing {
     color: #8C2641;
-    font-size: 35px;
+    font-size: 25px;
     position: absolute;
-    top: 110%;
+    top: 380px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 990;
@@ -416,6 +416,19 @@ margin-top: 61px;
   padding: 5px;
 }
 
+@media screen and (max-width: 480px) {
+  .mainLang-478 {
+    color: #D9A3A3;
+    font-size: 25px;
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 990;
+    padding: 5px;
+  }
+  }
+
 .mainLang-10 {
   color: #D9A3A3;
   font-size: 40px;
@@ -430,9 +443,9 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
   .mainLang-10 {
     color: #D9A3A3;
-    font-size: 35px;
+    font-size: 25px;
     position: absolute;
-    top: 110%;
+    top: 380px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 990;
@@ -443,7 +456,7 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
 .mainLang-box {
     color: #6351A3;
-    font-size: 20px;
+    font-size: 25px;
     top: 145px;
   }
 }
@@ -1131,9 +1144,19 @@ left: 3%;
 }
 
 @media screen and (max-width: 480px) {
-  .triangle {
+  .box {
     width: 300px; 
     height: 300px;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    max-width: 100%;  /* Adjust based on your needs */
+  }
+  }
+
+@media screen and (max-width: 480px) {
+  .triangle {
+    width: 250px; 
+    height: 250px;
     animation: breathing 20s linear infinite;
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove any extra space below the image */
@@ -1177,7 +1200,7 @@ left: 3%;
 @media screen and (max-width: 480px) {
   #counter3 {
     position: absolute;
-    font-size: 35px;
+    font-size: 25px;
     color: #FFEEDB;
     font-family: sans-serif;
     animation: counter3-breathing 19s linear infinite;
@@ -1292,6 +1315,14 @@ left: 3%;
   .site-footer-478 {
     margin-top: 40px;
     background-color: #73464E;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-footer-box {
+    margin-top: 40px;
+    background-color: #D9A3BC;
     text-align: center;
   }
 }
