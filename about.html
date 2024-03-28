@@ -30,13 +30,15 @@
          <img src="frame1.svg" alt="Hamburger Icon" class="hamburger" id="hamburger">
          </div>
          <div class="menu-icon" onclick="randomizeBreathingTechnique()">
-          <img src="random1.svg" alt="Randomize Icon" class="random" id="randomIcon">
-        </div>
-        <div onclick="toggleMusicIcon()">
-          <img src="on1.svg" alt="Music Icon" class="music" id="musicIcon">
-        </div>
+           <img src="random1.svg" alt="Randomize Icon" class="random" id="randomIcon">
+         </div>
+         <div onclick="toggleMusicIcon()">
+           <img src="off1.svg" alt="Music Icon" class="music" id="musicIcon">
+         </div>
        </div>
-
+   
+       <audio id="sereneAudio" src="serene.mp3"></audio>
+   
       <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
         <a href="./box-breathing.html">Box breathing</a>
         <a href="./478.html">478 technique</a>
@@ -112,17 +114,40 @@
       }
     }
   </script>
-  <script>
-    function toggleMusicIcon() {
-      const musicIcon = document.getElementById('musicIcon');
-  
-      // Check if the icon is currently showing 'on'
-      if (musicIcon.getAttribute('src') === 'on1.svg') {
-        musicIcon.setAttribute('src', 'off1.svg');  // If so, switch to 'off'
-      } else {
-        musicIcon.setAttribute('src', 'on1.svg');  // Otherwise, switch back to 'on'
-      }
+<script>
+  function toggleMusicIcon() {
+    const musicIcon = document.getElementById('musicIcon');
+
+    // Check if the icon is currently showing 'on'
+    if (musicIcon.getAttribute('src') === 'off1.svg') {
+      musicIcon.setAttribute('src', 'on1.svg');  // If so, switch to 'off'
+    } else {
+      musicIcon.setAttribute('src', 'off1.svg');  // Otherwise, switch back to 'on'
     }
-  </script>
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const musicIcon = document.getElementById('musicIcon');
+    const audio = document.getElementById('sereneAudio');
+
+    // Assuming music should be off initially
+    musicIcon.src = 'off1.svg'; // Start with the 'off' icon
+    audio.pause();
+
+    window.toggleMusicIcon = function() {
+      if (musicIcon.src.includes('off1.svg')) {
+        // If the 'off' icon is displayed, play the music and switch to the 'on' icon
+        audio.play();
+        musicIcon.src = 'on1.svg';
+      } else {
+        // If the 'on' icon is displayed, stop the music, switch to the 'off' icon, and reset the song
+        audio.pause();
+        audio.currentTime = 0;  // Reset the song to the beginning
+        musicIcon.src = 'off1.svg';
+      }
+    };
+  });
+</script>
 </body>
 </html>
