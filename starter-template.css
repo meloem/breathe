@@ -1304,7 +1304,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer {
-    margin-top: 60px;
+    margin-top: 85px;
     background-color: #D3E8F4;
     text-align: center;
   }
@@ -1312,7 +1312,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer-478 {
-    margin-top: 60px;
+    margin-top: 85px;
     background-color: #73464E;
     text-align: center;
   }
@@ -1320,7 +1320,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer-box {
-    margin-top: 60px;
+    margin-top: 85px;
     background-color: #D9A3BC;
     text-align: center;
   }
@@ -1328,7 +1328,7 @@ left: 3%;
 
 @media screen and (max-width: 480px) {
   .site-footer-10 {
-    margin-top: 60px;
+    margin-top: 85px;
     background-color: #1D3273;
     text-align: center;
   }
