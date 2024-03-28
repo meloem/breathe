@@ -374,11 +374,10 @@ margin-top: 61px;
   color: #6351A3;
   font-size: 35px;
   position: absolute;
-  top: 110%;
+  top: 120%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 990;
-  padding: 5px;
 }
 
 .mainLang-boxbreathing {
@@ -456,8 +455,8 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
 .mainLang-box {
     color: #6351A3;
-    font-size: 25px;
-    top: 145px;
+    font-size: 20px;
+    top: 170px;
   }
 }
 
@@ -1233,7 +1232,7 @@ left: 3%;
       z-index: 700;
       position: absolute;
       margin-top: inherit;
-      top:225px;
+      top:255px;
   }
 }
 
