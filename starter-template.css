@@ -11,7 +11,6 @@ body {
 @media (max-width: 480px) {
   .body {
     margin: 0px;
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
     background-color: #FFEEDB;
     flex-direction: column;
     margin: 0;
@@ -392,6 +391,7 @@ margin-top: 61px;
   font-size: 25px;
   margin-top: 20px;
   -webkit-animation: FadeIn;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
 
 }
 
@@ -401,6 +401,7 @@ margin-top: 61px;
       font-size: 20px;
       top:75px;
       padding: 10px;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
     }
   }
 
@@ -412,6 +413,8 @@ margin-top: 61px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 990;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 600;
 }
 
 .mainLang-boxbreathing {
@@ -423,6 +426,7 @@ margin-top: 61px;
   transform: translate(-50%, -50%);
   z-index: 990;
   padding: 5px;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 @media screen and (max-width: 480px) {
@@ -435,6 +439,7 @@ margin-top: 61px;
     transform: translate(-50%, -50%);
     z-index: 990;
     padding: 5px;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
     }
   }
 
@@ -447,6 +452,7 @@ margin-top: 61px;
   transform: translate(-50%, -50%);
   z-index: 990;
   padding: 5px;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 @media screen and (max-width: 480px) {
@@ -459,6 +465,7 @@ margin-top: 61px;
     transform: translate(-50%, -50%);
     z-index: 990;
     padding: 5px;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   }
   }
 
@@ -471,6 +478,7 @@ margin-top: 61px;
   transform: translate(-50%, -50%);
   z-index: 990;
   padding: 5px;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 @media screen and (max-width: 480px) {
@@ -483,6 +491,7 @@ margin-top: 61px;
     transform: translate(-50%, -50%);
     z-index: 990;
     padding: 5px;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
     }
   }
 
@@ -491,6 +500,7 @@ margin-top: 61px;
     color: #6351A3;
     font-size: 20px;
     top: 170px;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   }
 }
 

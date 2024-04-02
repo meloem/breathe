@@ -9,6 +9,13 @@
 
   <title>Breathe</title>
   <link href="starter-template.css" rel="stylesheet">
+  <style>
+    /* Initial state of the element - fully transparent */
+    .mainLang-box.text-animated-box {
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+    }
+</style>
 
 </head>
 
@@ -35,7 +42,7 @@
       </div>
     </div>
 
-    <audio id="sereneAudio" src="serene.mp3"></audio>
+    <audio id="sereneAudio" src="audio.mp3"></audio>
 
 
     <div id="dropdownMenu" class="dropdown-menu">
@@ -64,7 +71,7 @@
     <img src="ellipse.svg" alt="ellipse" class="ellipse">
     <div id="counter">1</div>
     </div>
-    <h1 class="mainLang-box text-animated-box text-fade-in">Sync your breathing</h1>
+    <div class="mainLang-box text-animated-box">Initial Text</div>
 </div>
         </div>
     </div>
@@ -104,57 +111,43 @@
 </script>
 
 <script>
-  // Wait for the DOM to fully load
   document.addEventListener('DOMContentLoaded', function() {
-    // Select the h1 element
-    const mainLangBox = document.querySelector('.mainLang-box.text-animated-box');
+      const mainLangBox = document.querySelector('.mainLang-box.text-animated-box');
 
-    // Initially set the text to "Welcome"
-    mainLangBox.textContent = 'Welcome to your breathing space';
+      // Fade in the initial text
+      mainLangBox.textContent = 'Welcome to your breathing space';
+      mainLangBox.style.opacity = 1;
 
-    // Change the text after 3 seconds
-    setTimeout(function() {
-      mainLangBox.textContent = 'Feel the rhythm, relax, and when ready, explore more techniques in the menu';
-    }, 3000); // 3000 milliseconds = 3 seconds
+      setTimeout(function() {
+          // Fade out the text
+          mainLangBox.style.opacity = 0;
+
+          // Change the text after it fades out and fade in new text
+          setTimeout(function() {
+              mainLangBox.textContent = 'Feel the rhythm, relax, and when ready, explore more techniques in the menu';
+              mainLangBox.style.opacity = 1;
+          }, 3000); // Match this delay with the transition time to ensure it fades out completely before changing the text
+      }, 4000); // Time before text starts to fade out
   });
 </script>
 <script>
-  // function toggleMusicIcon() {
-  //   const musicIcon = document.getElementById('musicIcon');
-
-  //   // Check if the icon is currently showing 'on'
-  //   if (musicIcon.getAttribute('src') === 'off1.svg') {
-  //     musicIcon.setAttribute('src', 'on1.svg');  // If so, switch to 'off'
-  //   } else {
-  //     musicIcon.setAttribute('src', 'off1.svg');  // Otherwise, switch back to 'on'
-  //   }
-  // }
-</script>
-<script>
   document.addEventListener('DOMContentLoaded', function() {
-    const musicIcon = document.getElementById('musicIcon');
-    const audio = document.getElementById('sereneAudio');
+      const mainLangBox = document.querySelector('.mainLang-box.text-animated-box');
 
-    window.toggleMusicIcon = function() {
-      if (day && musicIcon.src.includes('off1.svg')) {
-        // If the 'off' icon is displayed, play the music and switch to the 'on' icon
-        audio.play();
-        musicIcon.src = 'on1.svg';
-      } else if (day && musicIcon.src.includes('on1.svg')) {
-        // If the 'on' icon is displayed, stop the music, switch to the 'off' icon, and reset the song
-        audio.pause();
-        audio.currentTime = 0;  // Reset the song to the beginning
-        musicIcon.src = 'off1.svg';
-      } else if (!day && musicIcon.src.includes('off3.svg')) {
-        audio.play()
-        musicIcon.src = 'on3.svg'
-      }
-     else if (!day && musicIcon.src.includes('on3.svg')) {
-        audio.pause();
-        audio.currentTime = 0;  // Reset the song to the beginning
-        musicIcon.src = 'off3.svg';
-     }
-    };
+      // Fade in the initial text
+      mainLangBox.textContent = 'Welcome to your breathing space';
+      mainLangBox.style.opacity = 1;
+
+      setTimeout(function() {
+          // Fade out the text
+          mainLangBox.style.opacity = 0;
+
+          // Change the text after it fades out and fade in new text
+          setTimeout(function() {
+              mainLangBox.textContent = 'Feel the rhythm, relax, and when ready, explore more techniques in the menu';
+              mainLangBox.style.opacity = 1;
+          }, 2000); // Match this delay with the transition time to ensure it fades out completely before changing the text
+      }, 3000); // Time before text starts to fade out
   });
 </script>
 </body>
