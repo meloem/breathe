@@ -1,3 +1,5 @@
+var hrs = new Date().getHours()
+var day = true
 
 
 $(document).ready(function(){
@@ -27,6 +29,7 @@ $(document).ready(function(){
   }
 
   function setNight() {
+    day = false
     $('body').css("background-color", "black")
     $('.site-footer').css("background-color", "black")
     $('.site-footer-about').css("background-color", "black")
@@ -46,9 +49,10 @@ $(document).ready(function(){
     $('.site-footer-box a').css("color", "#D9A3A3")
     $('.slider').css("background-color", "#FAB152")
     $('.box').attr("src", "box2.gif");
-    
+
   }
   function setDay() {
+    day = true
     if (location.href.includes("478")) {
       $('body').css("background-color", "#73464E");
       $('.site-footer-478').css("background-color", "#73464E");
@@ -112,13 +116,6 @@ $('.music').attr("src", "off1.svg");
 
   $('.slider').click(toggleDayNight)
 
-  var hrs = new Date().getHours()
-  var day = true
-
-  if ( hrs > 19 || hrs < 8 ) {
-    $('.slider').click()
-  }
-
   function displayElts(){
     function checkInView (element) {
       var coords = element.getBoundingClientRect()
@@ -163,3 +160,5 @@ function updateCounter() {
 
 // Initialize the counter immediately
 updateCounter();
+
+

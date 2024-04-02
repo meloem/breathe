@@ -119,37 +119,41 @@
   });
 </script>
 <script>
-  function toggleMusicIcon() {
-    const musicIcon = document.getElementById('musicIcon');
+  // function toggleMusicIcon() {
+  //   const musicIcon = document.getElementById('musicIcon');
 
-    // Check if the icon is currently showing 'on'
-    if (musicIcon.getAttribute('src') === 'off1.svg') {
-      musicIcon.setAttribute('src', 'on1.svg');  // If so, switch to 'off'
-    } else {
-      musicIcon.setAttribute('src', 'off1.svg');  // Otherwise, switch back to 'on'
-    }
-  }
+  //   // Check if the icon is currently showing 'on'
+  //   if (musicIcon.getAttribute('src') === 'off1.svg') {
+  //     musicIcon.setAttribute('src', 'on1.svg');  // If so, switch to 'off'
+  //   } else {
+  //     musicIcon.setAttribute('src', 'off1.svg');  // Otherwise, switch back to 'on'
+  //   }
+  // }
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const musicIcon = document.getElementById('musicIcon');
     const audio = document.getElementById('sereneAudio');
 
-    // Assuming music should be off initially
-    musicIcon.src = 'off1.svg'; // Start with the 'off' icon
-    audio.pause();
-
     window.toggleMusicIcon = function() {
-      if (musicIcon.src.includes('off1.svg')) {
+      if (day && musicIcon.src.includes('off1.svg')) {
         // If the 'off' icon is displayed, play the music and switch to the 'on' icon
         audio.play();
         musicIcon.src = 'on1.svg';
-      } else {
+      } else if (day && musicIcon.src.includes('on1.svg')) {
         // If the 'on' icon is displayed, stop the music, switch to the 'off' icon, and reset the song
         audio.pause();
         audio.currentTime = 0;  // Reset the song to the beginning
         musicIcon.src = 'off1.svg';
+      } else if (!day && musicIcon.src.includes('off3.svg')) {
+        audio.play()
+        musicIcon.src = 'on3.svg'
       }
+     else if (!day && musicIcon.src.includes('on3.svg')) {
+        audio.pause();
+        audio.currentTime = 0;  // Reset the song to the beginning
+        musicIcon.src = 'off3.svg';
+     }
     };
   });
 </script>
