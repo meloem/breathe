@@ -5,15 +5,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="manifest" href="site.webmanifest">  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
   <title>Breathe</title>
   <link href="starter-template.css" rel="stylesheet">
 
 </head>
 
-<body style="background-color: #73464E">
+<body style="background-color: #1D3273">
     <div class="container">
       <div class="largeScreen centre">
       <label class="switch hidden-lg-up">
@@ -22,7 +21,7 @@
       </label>
 
       <div class="icons">
-        <a href="index.html" class="home-link">
+        <a href="indexfr.html" class="home-link">
            <img src="home.svg" alt="Home Icon" class="home">
          </a>
          <div class="menu-icon" onclick="toggleMenu()">
@@ -35,21 +34,20 @@
           <img src="off3.svg" alt="Music Icon" class="music" id="musicIcon">
         </div>
         <div class="language-icon">
-          <img src="FR3.svg" alt="language Icon" class="language" id="languageicon1">
+          <img src="EN3.svg" alt="language Icon" class="language" id="languageicon1">
         </div>
         <div class="language-icon">
-          <img src="EN3.svg" alt="language Icon" class="language2" id="languageicon2">
+          <img src="FR3.svg" alt="language Icon" class="language2" id="languageicon2">
         </div>
        </div>
 
        <audio id="sereneAudio" src="audio.mp3"></audio>
 
-
-    <div id="dropdownMenu" class="dropdown-menu">
-      <a href="./box-breathing.html">Box breathing</a>
-      <a href="./478.html">478 technique</a>
-      <a href="./10.html">10 in 10 out</a>
-  </div>
+       <div id="dropdownMenu" class="dropdown-menu">
+        <a href="./box-breathingfr.html">Respiration en boîte</a>
+        <a href="./478fr.html">Technique 478</a>
+        <a href="./10fr.html">10 secondes</a>
+    </div>
 
     <script>
       // JavaScript to toggle the dropdown menu
@@ -64,6 +62,12 @@
       </script>
 
 <script>
+    document.getElementById('languageicon1').addEventListener('click', function() {
+      window.location.href = '10.html'; // Redirect to indexfr.html
+    });
+  </script>
+
+<script>
   // JavaScript to toggle the icons
   document.getElementById('languageicon1').addEventListener('click', function() {
     document.getElementById('languageicon1').style.display = 'none';
@@ -76,27 +80,21 @@
   });
 </script>
 
-<script>
-  document.getElementById('languageicon1').addEventListener('click', function() {
-    window.location.href = '478fr.html'; // Redirect to indexfr.html
-  });
-</script>
-
 <!-- <div class="ellipse-container">
   <div id="counter">1</div> -->
 
   <div class="centered-container">
     <div class="fullellipse">
-    <img src="heart.svg" alt="heart" class="heart">
-    <div id="counter3">1</div>
+    <img src="triangle.svg" alt="triangle" class="triangle">
+    <div id="counter2">1</div>
     </div>
-    <h1 class="mainLang-478 text-animated-478" id="counter3">Sync your breathing</h1>
+    <h1 class="mainLang-10 text-animated-10">Sync your breathing</h1>
 </div>
         </div>
     </div>
   </div>
-  <footer class="site-footer-478">
-    <a href="about.html">About</a>
+  <footer class="site-footer-10">
+    <a href="aboutfr.html">À propos</a>
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <script src="script.js"></script>
@@ -107,18 +105,54 @@
       document.getElementById('counter').textContent = count;
       count = count >= 5 ? 1 : count + 1;
     }, 1000); // Update the count every 1000 milliseconds (1 second)
-  </script>
-  <script>
+    </script>
+<script>
+  let count2 = 1;
+  let totalSeconds2 = 0; // Track the total seconds to determine the phase
+  const counter2 = document.getElementById('counter2');
+  const textDisplay2 = document.querySelector('.mainLang-10.text-animated-10'); // Get the h1 element
 
+  function updateCounter2() {
+    counter2.textContent = count2.toString();
+    totalSeconds2++; // Increment the total seconds
+
+    // Update the h1 text based on the current phase
+    if (totalSeconds2 <= 10) {
+      textDisplay2.textContent = "Inspirez pour 10 secondes";
+    } else {
+      textDisplay2.textContent = "Expirez pour 10 secondes";
+    }
+
+    // Increment the counter and reset if it reaches beyond 10
+    if (count2 >= 10) {
+      count2 = 1; // Reset the counter after 10
+    } else {
+      count2++;
+    }
+
+    // Reset the total seconds after 20 to restart the cycle
+    if (totalSeconds2 > 20) {
+      totalSeconds2 = 1; // Reset the total seconds to start a new cycle
+    }
+
+    // Repeat the function every second
+    setTimeout(updateCounter2, 1000);
+  }
+
+  // Initialize the counter immediately
+  updateCounter2();
+</script>
+
+<script>
     function randomizeBreathingTechnique() {
-      const pages = ['./box-breathing.html', './478.html', './10.html'];
-
+      const pages = ['./box-breathingfr.html', './478fr.html', './10fr.html'];
+  
       // Get a random page
       let randomPage = pages[Math.floor(Math.random() * pages.length)];
-
+  
       // Add a unique timestamp or random number as a query string to the URL
       const uniqueString = '?t=' + new Date().getTime();
-
+  
       // Check if the random page is the same as the current page
       if (window.location.pathname.includes(randomPage.replace('./', ''))) {
         // If it's the same page, call the function again to get a new page
@@ -128,47 +162,7 @@
         window.location.href = randomPage + uniqueString;
       }
     }
-    </script>
-<script>
-  let count3 = 1;
-  let totalSeconds = 0; // Counter for the entire breathing cycle
-  const counter3 = document.getElementById('counter3'); // Counter display
-  const textDisplay = document.querySelector('.mainLang-478.text-animated-478'); // Text display
-
-  function updateCounter3() {
-    // Update the text based on the current second in the cycle
-    if (totalSeconds < 4) { // Breathe in
-      textDisplay.textContent = "Breathe in for 4";
-    } else if (totalSeconds < 11) { // Freeze
-      textDisplay.textContent = "Hold for 7";
-    } else if (totalSeconds < 19) { // Breathe out
-      textDisplay.textContent = "Breathe out for 8";
-    }
-
-    // Update the counter display
-    counter3.textContent = count3.toString();
-    
-    // Increment the counter and total seconds
-    count3++;
-    totalSeconds++;
-
-    // Check and reset at the end of each phase
-    if (totalSeconds === 4 || totalSeconds === 11 || totalSeconds === 19) {
-      count3 = 1;
-    }
-
-    // Reset the total seconds after a full cycle
-    if (totalSeconds >= 19) {
-      totalSeconds = 0;
-      textDisplay.textContent = "Breathe in for 4"; // Ensure immediate update to "Breathe in" at cycle reset
-    }
-
-    setTimeout(updateCounter3, 1000);
-  }
-
-  // Initialize the counter
-  updateCounter3();
-</script>
+  </script>
 <script>
   function toggleMusicIcon() {
     const musicIcon = document.getElementById('musicIcon');
@@ -204,6 +198,5 @@
     };
   });
 </script>
-    
 </body>
 </html>

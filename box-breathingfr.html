@@ -21,7 +21,7 @@
       </label>
 
       <div class="icons">
-        <a href="index.html" class="home-link">
+        <a href="indexfr.html" class="home-link">
            <img src="home.svg" alt="Home Icon" class="home">
          </a>
          <div class="menu-icon" onclick="toggleMenu()">
@@ -34,21 +34,21 @@
           <img src="off1.svg" alt="Music Icon" class="music" id="musicIcon">
         </div>
         <div class="language-icon">
-          <img src="FR4.svg" alt="language Icon" class="language" id="languageicon1">
+          <img src="EN4.svg" alt="language Icon" class="language" id="languageicon1">
         </div>
         <div class="language-icon">
-          <img src="EN4.svg" alt="language Icon" class="language2" id="languageicon2">
+          <img src="FR4.svg" alt="language Icon" class="language2" id="languageicon2">
         </div>
       </div>
   
       <audio id="sereneAudio" src="audio.mp3"></audio>
        </div>
 
-    <div id="dropdownMenu" class="dropdown-menu">
-      <a href="./box-breathing.html">Box breathing</a>
-      <a href="./478.html">478 technique</a>
-      <a href="./10.html">10 in 10 out</a>
-  </div>
+       <div id="dropdownMenu" class="dropdown-menu">
+        <a href="./box-breathingfr.html">Respiration en boîte</a>
+        <a href="./478fr.html">Technique 478</a>
+        <a href="./10fr.html">10 secondes</a>
+    </div>
 
     <script>
       // JavaScript to toggle the dropdown menu
@@ -64,10 +64,9 @@
       
       <script>
         document.getElementById('languageicon1').addEventListener('click', function() {
-          window.location.href = 'box-breathingfr.html'; // Redirect to indexfr.html
+          window.location.href = 'box-breathing.html'; // Redirect to indexfr.html
         });
       </script>
-
 <script>
   // JavaScript to toggle the icons
   document.getElementById('languageicon1').addEventListener('click', function() {
@@ -95,7 +94,7 @@
     </div>
   </div>
   <footer class="site-footer-box">
-    <a href="about.html">About</a>
+    <a href="aboutfr.html">À propos</a>
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <script src="script.js"></script>
@@ -118,13 +117,13 @@
 
     // Update the h1 text based on the current phase
     if (totalSeconds4 >= 0 && totalSeconds4 < 4) {
-      textDisplay4.textContent = "Breathe in for 4";
+      textDisplay4.textContent = "Inspirez pour 4 secondes";
     } else if (totalSeconds4 >= 4 && totalSeconds4 < 8) {
-      textDisplay4.textContent = "Hold for 4";
+      textDisplay4.textContent = "Maintenez votre respiration pour 4 secondes";
     } else if (totalSeconds4 >= 8 && totalSeconds4 < 12) {
-      textDisplay4.textContent = "Breathe out for 4";
+      textDisplay4.textContent = "Expirez pour 4 secondes";
     } else if (totalSeconds4 >= 12 && totalSeconds4 < 16) {
-      textDisplay4.textContent = "Hold for 4";
+      textDisplay4.textContent = "Maintenez votre respiration pour 4 secondes";
     }
 
     // Increment the counters
@@ -145,25 +144,25 @@
 </script>
 
 <script>
-  function randomizeBreathingTechnique() {
-    const pages = ['./box-breathing.html', './478.html', './10.html'];
-
-    // Get a random page
-    let randomPage = pages[Math.floor(Math.random() * pages.length)];
-
-    // Add a unique timestamp or random number as a query string to the URL
-    const uniqueString = '?t=' + new Date().getTime();
-
-    // Check if the random page is the same as the current page
-    if (window.location.pathname.includes(randomPage.replace('./', ''))) {
-      // If it's the same page, call the function again to get a new page
-      randomizeBreathingTechnique();
-    } else {
-      // If it's a different page, navigate to the new page with the unique query string
-      window.location.href = randomPage + uniqueString;
+    function randomizeBreathingTechnique() {
+      const pages = ['./box-breathingfr.html', './478fr.html', './10fr.html'];
+  
+      // Get a random page
+      let randomPage = pages[Math.floor(Math.random() * pages.length)];
+  
+      // Add a unique timestamp or random number as a query string to the URL
+      const uniqueString = '?t=' + new Date().getTime();
+  
+      // Check if the random page is the same as the current page
+      if (window.location.pathname.includes(randomPage.replace('./', ''))) {
+        // If it's the same page, call the function again to get a new page
+        randomizeBreathingTechnique();
+      } else {
+        // If it's a different page, navigate to the new page with the unique query string
+        window.location.href = randomPage + uniqueString;
+      }
     }
-  }
-</script>
+  </script>
 <script>
   function toggleMusicIcon() {
     const musicIcon = document.getElementById('musicIcon');

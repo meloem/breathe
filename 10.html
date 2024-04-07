@@ -33,6 +33,12 @@
         <div onclick="toggleMusicIcon()">
           <img src="off3.svg" alt="Music Icon" class="music" id="musicIcon">
         </div>
+        <div class="language-icon">
+          <img src="FR3.svg" alt="language Icon" class="language" id="languageicon1">
+        </div>
+        <div class="language-icon">
+          <img src="EN3.svg" alt="language Icon" class="language2" id="languageicon2">
+        </div>
        </div>
 
        <audio id="sereneAudio" src="audio.mp3"></audio>
@@ -55,6 +61,25 @@
           }
       }
       </script>
+
+<script>
+  document.getElementById('languageicon1').addEventListener('click', function() {
+    window.location.href = '10fr.html'; // Redirect to indexfr.html
+  });
+</script>
+
+<script>
+  // JavaScript to toggle the icons
+  document.getElementById('languageicon1').addEventListener('click', function() {
+    document.getElementById('languageicon1').style.display = 'none';
+    document.getElementById('languageicon2').style.display = 'block';
+  });
+
+  document.getElementById('languageicon2').addEventListener('click', function() {
+    document.getElementById('languageicon2').style.display = 'none';
+    document.getElementById('languageicon1').style.display = 'block';
+  });
+</script>
 
 <!-- <div class="ellipse-container">
   <div id="counter">1</div> -->

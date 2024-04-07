@@ -22,7 +22,7 @@
       </label>
 
       <div class="icons">
-        <a href="index.html" class="home-link">
+        <a href="indexfr.html" class="home-link">
            <img src="home.svg" alt="Home Icon" class="home">
          </a>
          <div class="menu-icon" onclick="toggleMenu()">
@@ -35,21 +35,21 @@
           <img src="off3.svg" alt="Music Icon" class="music" id="musicIcon">
         </div>
         <div class="language-icon">
-          <img src="FR3.svg" alt="language Icon" class="language" id="languageicon1">
+          <img src="EN3.svg" alt="language Icon" class="language" id="languageicon1">
         </div>
         <div class="language-icon">
-          <img src="EN3.svg" alt="language Icon" class="language2" id="languageicon2">
+          <img src="FR3.svg" alt="language Icon" class="language2" id="languageicon2">
         </div>
        </div>
 
        <audio id="sereneAudio" src="audio.mp3"></audio>
 
 
-    <div id="dropdownMenu" class="dropdown-menu">
-      <a href="./box-breathing.html">Box breathing</a>
-      <a href="./478.html">478 technique</a>
-      <a href="./10.html">10 in 10 out</a>
-  </div>
+       <div id="dropdownMenu" class="dropdown-menu">
+        <a href="./box-breathingfr.html">Respiration en boîte</a>
+        <a href="./478fr.html">Technique 478</a>
+        <a href="./10fr.html">10 secondes</a>
+    </div>
 
     <script>
       // JavaScript to toggle the dropdown menu
@@ -62,7 +62,11 @@
           }
       }
       </script>
-
+<script>
+    document.getElementById('languageicon1').addEventListener('click', function() {
+      window.location.href = '478.html'; // Redirect to indexfr.html
+    });
+  </script>
 <script>
   // JavaScript to toggle the icons
   document.getElementById('languageicon1').addEventListener('click', function() {
@@ -73,12 +77,6 @@
   document.getElementById('languageicon2').addEventListener('click', function() {
     document.getElementById('languageicon2').style.display = 'none';
     document.getElementById('languageicon1').style.display = 'block';
-  });
-</script>
-
-<script>
-  document.getElementById('languageicon1').addEventListener('click', function() {
-    window.location.href = '478fr.html'; // Redirect to indexfr.html
   });
 </script>
 
@@ -96,7 +94,7 @@
     </div>
   </div>
   <footer class="site-footer-478">
-    <a href="about.html">About</a>
+    <a href="aboutfr.html">À propos</a>
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <script src="script.js"></script>
@@ -109,16 +107,15 @@
     }, 1000); // Update the count every 1000 milliseconds (1 second)
   </script>
   <script>
-
     function randomizeBreathingTechnique() {
-      const pages = ['./box-breathing.html', './478.html', './10.html'];
-
+      const pages = ['./box-breathingfr.html', './478fr.html', './10fr.html'];
+  
       // Get a random page
       let randomPage = pages[Math.floor(Math.random() * pages.length)];
-
+  
       // Add a unique timestamp or random number as a query string to the URL
       const uniqueString = '?t=' + new Date().getTime();
-
+  
       // Check if the random page is the same as the current page
       if (window.location.pathname.includes(randomPage.replace('./', ''))) {
         // If it's the same page, call the function again to get a new page
@@ -128,7 +125,7 @@
         window.location.href = randomPage + uniqueString;
       }
     }
-    </script>
+  </script>
 <script>
   let count3 = 1;
   let totalSeconds = 0; // Counter for the entire breathing cycle
@@ -138,11 +135,11 @@
   function updateCounter3() {
     // Update the text based on the current second in the cycle
     if (totalSeconds < 4) { // Breathe in
-      textDisplay.textContent = "Breathe in for 4";
+      textDisplay.textContent = "Inspirez pour 4 secondes";
     } else if (totalSeconds < 11) { // Freeze
-      textDisplay.textContent = "Hold for 7";
+      textDisplay.textContent = "Maintenez votre respiration pour 7 secondes";
     } else if (totalSeconds < 19) { // Breathe out
-      textDisplay.textContent = "Breathe out for 8";
+      textDisplay.textContent = "Expirez pour 8 secondes";
     }
 
     // Update the counter display
@@ -160,7 +157,7 @@
     // Reset the total seconds after a full cycle
     if (totalSeconds >= 19) {
       totalSeconds = 0;
-      textDisplay.textContent = "Breathe in for 4"; // Ensure immediate update to "Breathe in" at cycle reset
+      textDisplay.textContent = "Inspirez pour 4 secondes"; // Ensure immediate update to "Breathe in" at cycle reset
     }
 
     setTimeout(updateCounter3, 1000);
