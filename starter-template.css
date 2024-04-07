@@ -1510,4 +1510,23 @@ display:none;
   }
 }
 
+.language-icon {
+  position: fixed;
+  left: 0;
+  bottom: 35px;
+  cursor: pointer; /* Added to show a pointer cursor when hovering over the icons */
+  margin-left: 1%;
+}
+
+.language, .language2 {
+  width: 30px;
+  height: 30px;
+  opacity: 80%;
+  padding: 15px;
+}
+
+.language2 {
+  display: none;
+}
+
 
