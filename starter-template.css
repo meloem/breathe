@@ -398,7 +398,7 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
   .mainLang {
       color: #6351A3;
-      font-size: 20px;
+      font-size: 18px;
       top:75px;
       padding: 10px;
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
@@ -432,7 +432,7 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
   .mainLang-boxbreathing {
     color: #8C2641;
-    font-size: 25px;
+    font-size: 18px;
     position: absolute;
     top: 380px;
     left: 50%;
@@ -458,7 +458,7 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
   .mainLang-478 {
     color: #D9A3A3;
-    font-size: 25px;
+    font-size: 18px;
     position: absolute;
     top: 380px;
     left: 50%;
@@ -484,7 +484,7 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
   .mainLang-10 {
     color: #D9A3A3;
-    font-size: 25px;
+    font-size: 18px;
     position: absolute;
     top: 380px;
     left: 50%;
@@ -498,7 +498,7 @@ margin-top: 61px;
 @media screen and (max-width: 480px) {
 .mainLang-box {
     color: #6351A3;
-    font-size: 20px;
+    font-size: 18px;
     top: 170px;
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   }
@@ -1232,7 +1232,7 @@ left: 3%;
 
 #counter3 {
   position: absolute;
-  font-size: 40px;
+  font-size: 18px;
   color: #FFEEDB;
   font-family: sans-serif;
   animation: counter3-breathing 19s linear infinite;
@@ -1243,7 +1243,7 @@ left: 3%;
 @media screen and (max-width: 480px) {
   #counter3 {
     position: absolute;
-    font-size: 25px;
+    font-size: 18px;
     color: #FFEEDB;
     font-family: sans-serif;
     animation: counter3-breathing 19s linear infinite;
@@ -1298,7 +1298,7 @@ left: 3%;
 .site-footer-about a {
   text-decoration: none; /* Removes underline from links */
   color: #6351A3;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
   }
 
@@ -1319,7 +1319,7 @@ left: 3%;
   .site-footer-box a {
     text-decoration: none; /* Removes underline from links */
     color: #8C2641;
-      font-size: 20px;
+      font-size: 18px;
       font-family: sans-serif;
     margin-right: 40px;
     }
@@ -1327,7 +1327,7 @@ left: 3%;
   .site-footer-10 a {
     text-decoration: none; /* Removes underline from links */
     color: #D9A3A3;
-      font-size: 20px;
+      font-size: 18px;
       font-family: sans-serif;
     margin-right: 40px;
     }
@@ -1341,7 +1341,7 @@ left: 3%;
     .site-footer-478 a {
       text-decoration: none; /* Removes underline from links */
       color: #D9A3A3;
-        font-size: 20px;
+        font-size: 18px;
         font-family: sans-serif;
       margin-right: 40px;
       }
@@ -1389,7 +1389,7 @@ left: 3%;
 .site-footer a {
   text-decoration: none; /* Removes underline from links */
 color: #6351A3;
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 40px;
     font-family: sans-serif;
   }
@@ -1527,6 +1527,24 @@ display:none;
 
 .language2 {
   display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .language, .lanuage2 {
+    width: 20px;
+    height: 20px;
+    opacity: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .language-icon {
+    position: fixed;
+    left: 0;
+    bottom: 1px;
+    cursor: pointer; /* Added to show a pointer cursor when hovering over the icons */
+    margin-left: 1%;
+  }
 }
 
 
