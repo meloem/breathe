@@ -388,7 +388,7 @@ margin-top: 61px;
 
 .mainLang {
   color: #6351A3;
-  font-size: 25px;
+  font-size: 35px;
   margin-top: 20px;
   -webkit-animation: FadeIn;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
@@ -419,7 +419,7 @@ margin-top: 61px;
 
 .mainLang-boxbreathing {
   color: #8C2641;
-  font-size: 40px;
+  font-size: 35px;
   position: absolute;
   top: 110%;
   left: 50%;
@@ -445,7 +445,7 @@ margin-top: 61px;
 
 .mainLang-478 {
   color: #D9A3A3;
-  font-size: 40px;
+  font-size: 35px;
   position: absolute;
   top: 110%;
   left: 50%;
@@ -471,7 +471,7 @@ margin-top: 61px;
 
 .mainLang-10 {
   color: #D9A3A3;
-  font-size: 40px;
+  font-size: 35px;
   position: absolute;
   top: 110%;
   left: 50%;
@@ -1232,7 +1232,7 @@ left: 3%;
 
 #counter3 {
   position: absolute;
-  font-size: 18px;
+  font-size: 35px;
   color: #FFEEDB;
   font-family: sans-serif;
   animation: counter3-breathing 19s linear infinite;
@@ -1416,7 +1416,7 @@ color: #6351A3;
 
 #counter {
   position: absolute;
-  font-size: 50px; /* Adjust as needed */
+  font-size: 40px; /* Adjust as needed */
   color: #FFEEDB; /* Adjust as needed */
   font-family: sans-serif;
   animation: counter-breathing 10s linear infinite;
@@ -1440,7 +1440,7 @@ display:none;
 
 #counter2 {
   position: absolute;
-  font-size: 50px; /* Adjust as needed */
+  font-size: 30px; /* Adjust as needed */
   color: #FFEEDB; /* Adjust as needed */
   font-family: sans-serif;
   animation: counter2-breathing 20s linear infinite;
@@ -1450,7 +1450,7 @@ display:none;
 
 #counter4 {
   position: absolute;
-  font-size: 50px; /* Adjust as needed */
+  font-size: 40px; /* Adjust as needed */
   color: #FFEEDB; /* Adjust as needed */
   font-family: sans-serif;
   animation: counter2-breathing 20s linear infinite;
