@@ -404,6 +404,15 @@ margin-top: 61px;
 
 }
 
+.mainLang-mini-h {
+  color: #6351A3;
+  font-size: 15px;
+  margin-top: 15px;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  opacity: 90%;
+
+}
+
 @media screen and (max-width: 480px) {
   .mainLang-mini {
     color: #6351A3;
@@ -1300,14 +1309,14 @@ left: 3%;
 }
 
 .site-footer {
-  margin-top: 179px; /* Pushes the footer to the bottom */
+  margin-top: 133px; /* Pushes the footer to the bottom */
   background-color: #D3E8F4; /* Light grey background */
   padding: 30px; /* Adds some padding inside the footer */
   text-align:right; /* Centers the content */
 }
 
 .site-footer-about {
-  margin-top: 90px; /* Pushes the footer to the bottom */
+  margin-top: 40px; /* Pushes the footer to the bottom */
   background-color: #D3E8F4; /* Light grey background */
   padding: 50px; /* Adds some padding inside the footer */
   text-align:right; /* Centers the content */
@@ -1322,14 +1331,14 @@ left: 3%;
   }
 
   .site-footer-10 {
-    margin-top: 179px; /* Pushes the footer to the bottom */
+    margin-top: 133px; /* Pushes the footer to the bottom */
     padding: 30px; /* Adds some padding inside the footer */
     text-align:right; /* Centers the content */
     background-color: #1D3273;
   }
 
   .site-footer-box {
-    margin-top: 179px; /* Pushes the footer to the bottom */
+    margin-top: 133px; /* Pushes the footer to the bottom */
     padding: 30px; /* Adds some padding inside the footer */
     text-align:right; /* Centers the content */
     background-color: #D9A3BC;
@@ -1352,7 +1361,7 @@ left: 3%;
     }
 
     .site-footer-478 {
-      margin-top: 179px; /* Pushes the footer to the bottom */
+      margin-top: 133px; /* Pushes the footer to the bottom */
       padding: 30px; /* Adds some padding inside the footer */
       text-align:right; /* Centers the content */
     }
